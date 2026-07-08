@@ -69,18 +69,20 @@ p {
     align-items: flex-start;
     gap: 30px;
     padding: 40px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.video-column {
-    flex: 3;
-    min-width: 0;
+.video-column,
+.text-column {
+    flex: 1
 }
 
-.video-column video {
+.welcome-video {
     width: 100%;
-    max-width: 700px;
+    max-width: 450px;
+    height: auto;
+    display: block;
 }
 
 .text-column {
@@ -128,6 +130,55 @@ p {
   gap: 20px;
   flex-wrap: wrap;
 }
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.map-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.map-pin {
+  position: absolute;
+  transform: translate(-50%,-100%);
+}
+.map-pin img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.map-pin:hover img {
+  transform: scale(1.50);
+}
+.Alajuela {
+    left: 48%;
+    top: 45%;
+}    
+.Belen {
+    left: 54%;
+    top: 46%;
+}   
+.Guapiles {
+    left: 63%;
+    top: 43%;
+}  
+
+.Cartago {
+    left: 60%;
+    top: 51%;
+} 
+.LaPaz {
+    left: 55%;
+    top: 50%;
+} 
+.Toyopan {
+    left: 59%;
+    top: 47%;
+} 
+
 footer {
   font-size: 14px;
   font-family: Arial, sans-serif;
@@ -135,4 +186,56 @@ footer {
   background-color: #f2b6a3;
   color: #ffffff;
   padding: 10px;
+}
+@media (max-width: 700px) {
+  .locations {
+    padding: 30px 16px;
+  }
+
+  .locations h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .locations p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .map-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .map-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .map-pin img {
+    width: 32px;
+  }
+
+  .video-section {
+    flex-direction: column;
+    padding: 30px 16px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .video-column,
+  .text-column {
+    width: 100%;
+  }
+
+  .welcome-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .text-column p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
